@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="#">
+
+
+  <nav class="navbar navbar-light bg-primary text-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white"  href="#">DICOIN</a>
+    </div>
+  </nav>
+
+  <title>DApp Token Sale</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="width: 650px;">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="text-center">DICOIN TOKEN SALE</h1>
+      <hr/>
+      <br/>
+    </div>
+    <div id="loader">
+      <p class="text-center">Loading...</p>
+    </div>
+    <div id="content" class="text-center" style="display: none;">
+      <p>
+        INTRODUCTION "DicoinApp Token" (DICOIN)!
+        le prix de token est <span class="token-price"></span> Ether. Vous avez actuellement <span class="dapp-balance"></span>&nbsp;DICOINAPP.
+      </p>
+      <br/>
+      <form onSubmit="App.buyTokens(); return false;" role="form">
+        <div class="form-group">
+          <div class="input-group">
+            <input id="numberOfTokens" class="form-control input-lg" type="number" name="number" value="1" min="1" pattern="[0-9]">
+            </input>
+            <span class="input-group-btn">
+                  <button type="submit" class="btn btn-primary btn-lg">Acheter Tokens</button>
+                </span>
+          </div>
+        </div>
+      </form>
+      <br>
+      <div class="progress">
+        <div id="progress" class="progress-bar progress-bar-striped active" aria-valuemin="0" aria-valuemax="100">
+        </div>
+      </div>
+      <p><span class="tokens-sold"></span> / <span class="tokens-available"></span> Tokens vendu</p>
+      <hr>
+      <p id="accountAddress"></p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer class="page-footer font-small blue">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3 bg-primary">© 2021 Copyright:
+    <a href="https://DicoinApp.com/"> DicoinApp.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
